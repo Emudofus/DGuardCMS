@@ -1,0 +1,49 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+log:
+  url: /Account/log/:username/:password
+  param: { module: Account, action: log }
+staff:
+  url: /Account/staff
+  param: { module: Account, action: staff }
+News:
+  class: sfDoctrineRouteCollection
+  options:
+    module: News
+    model: Article
+    prefix_path: /News
+News_restore:
+  url: /News/:id/restore
+  param: { module: News, action: restore }
+
+comment:
+  url: /News/:article/Comment
+  param: { module: Comment, action: create }
+comment_delete:
+  url: /News/:article/Comment/:comment/delete
+  param: { module: Comment, action: delete }
+comment_restore:
+  url: /News/:article/Comment/:comment/restore
+  param: { module: Comment, action: restore }
+
+Poll_vote:
+  url: /Poll/:poll/vote/:option
+  param: { module: Poll, action: vote }
+Poll_show:
+  url: /Poll/:poll
+  param : { module: Poll, action: show }
+
+# default rules
+homepage:
+  url:   /
+  param: { module: News, action: index }
+
+# generic rules
+# please, remove them by adding more specific rules
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*

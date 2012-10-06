@@ -1,0 +1,35 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           FAQ
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              AQ
+    plural:                FAQ
+    route_prefix:          faq
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        # doesn't works because of ' :(
+        question:
+          help: <?php echo sfContext::getInstance()->getI18n()->__('You can put the english name, it\'ll be translated') . "\n" ?>
+        answer:
+          help: <?php echo sfContext::getInstance()->getI18n()->__('You can put the english name, it\'ll be translated') . "\n" ?>
+      list:
+        title: Faq List
+        max_per_page: 8
+        display: [Description]
+        layout: stacked
+        params: <b>%%=question%%</b> <small>%%answer%%</small>
+      filter:
+        fields:
+          question: { help: '' }
+          answer: { help: '' }
+      form:    ~
+      edit:
+        title: Edit FAQ "%%question%%"
+      new:     ~

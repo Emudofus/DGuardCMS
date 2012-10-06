@@ -1,0 +1,48 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/11-App
+
+# default values (~ = null)
+all:
+  news:
+    by_page: 3
+  contact:
+    by_page: 4
+  comments:
+    by_page: 5
+  polls:
+    by_page: 3
+  server: #"IsOnline?" "Serveur en ligne?"
+    ip: game.myserver.com
+    port: 443
+    name: MyServer
+  board_url: ~ #%host%/board/
+  recaptcha: #you need your key on the ReCaptcha site - Vous avez besoin d'une clef sur le site ReCaptcha
+    public_key: ~
+    private_key: ~
+  download:
+    launcher: ~
+    config: ~
+  shop:
+    expanded: true #show all on the index ? - Montrer la boutique dans sa totalité sur l'index?
+    name: Gold #points name - Nom de points
+  pass:
+    type: star #~ for disabling - "~" pour désactiver
+    value: 100 #point(s) given for a code - points par code
+    idd: 50
+  vote:
+    id: 5 # RPG Paradize ID (~ for disabling) - ID RPG Paradize ("~" pour désactiver)
+    value: 2 #point(s) given for a vote - points par vote
+  log: # login - connexion
+    max: 4 #max number of attempts - nombre d'essais maximum
+    wait: 15minutes #time to wait when limit reached - temps après avoir atteint la limite, pour re-essayer
+
+
+
+
+
+# Advanced configuration
+## DO NOT EDIT UNLESS YOU KNOW WHAT YOU'RE DOING
+## NE PAS TOUCHER SAUF SI VOUS ÊTES TOTALEMENT SÛR DE CE QUE VOUS FAITES
+  #enable or disable the DB handle (disable it when you don't need it)
+  #activer ou désactiver la configuration depuis la base de données
+  db_handler: false

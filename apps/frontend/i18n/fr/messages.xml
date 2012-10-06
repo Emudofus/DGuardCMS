@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+	<file source-language="EN" target-language="fr" datatype="plaintext" original="messages" date="2010-10-20T10:55:12Z" product-name="messages">
+		<header />
+		<body>
+			<trans-unit>
+				<source><![CDATA[Welcome on %serv%,<br />If you're looking for stability and features,<br />You just found what you were looking for !]]></source>
+				<target><![CDATA[Bienvenue sur %serv%,<br />Si vous cherchez le maximum de stabilité et de flexibilité,<br />Vous trouverez ici votre bonheur !]]></target>
+			</trans-unit>
+			<trans-unit>
+				<source>Welcome, %name%</source>
+				<target>Bienvenue, %name%</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Vote and earn %money% !</source>
+				<target>Vote et cumule des %money% !</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Not actually subscriber</source>
+				<target>Vous n'êtes pas abonné</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Logged out successfully.</source>
+				<target>Vous avez été déconnecté avec succès.</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Log In</source>
+				<target>Connexion</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Log Out</source>
+				<target>Déconnexion</target>
+			</trans-unit>
+			<trans-unit>
+				<source><![CDATA[Logged on as <b>%s</b>]]></source>
+				<target><![CDATA[Connecté en tant que <b>%s</b>]]></target>
+			</trans-unit>
+			<trans-unit>
+				<source>Invalid username/password.</source>
+				<target>Nom d'utilisateur / Mot de passe incorrect</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Logged out</source>
+				<target>Déconnecté</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Registration</source>
+				<target>Inscription</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Register</source>
+				<target>S'inscrire</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Edit Article</source>
+				<target>Éditer l'Article</target>
+			</trans-unit>
+			<trans-unit>
+				<source>New Article</source>
+				<target>Nouvel Article</target>
+			</trans-unit>
+			<trans-unit>
+				<source><![CDATA[You don't have account ?]]></source>
+				<target><![CDATA[Vous n'avez pas de compte ?]]></target>
+			</trans-unit>
+			<trans-unit>
+				<source>Invalid.</source>
+				<target>Invalide.</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Required.</source>
+				<target>Requis.</target>
+			</trans-unit>
+
+			<trans-unit>
+				<source>Username</source>
+				<target>Nom d'utilisateur</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Password</source>
+				<target>Mot de passe</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Mail</source>
+				<target>E-Mail</target>
+			</trans-unit>
+
+			<trans-unit>
+				<source>Visitor</source>
+				<target>Visiteur</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Player</source>
+				<target>Joueur</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Moderator</source>
+				<target>Modérateur</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Master of Game</source>
+				<target>Maître du jeu</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Developer</source>
+				<target>Développeur</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Administrator</source>
+				<target>Administrateur</target>
+			</trans-unit>
+
+			<trans-unit>
+				<source>Title</source>
+				<target>Titre</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Content</source>
+				<target>Contenu</target>
+			</trans-unit>
+
+			<trans-unit>
+				<source>Back to list</source>
+				<target>Revenir à la liste</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Delete</source>
+				<target>Supprimer</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Restore</source>
+				<target>Restaurer</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Edit</source>
+				<target>Éditer</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Save</source>
+				<target>Sauvegarder</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Send</source>
+				<target>Envoyer</target>
+			</trans-unit>
+
+			<trans-unit>
+				<source><![CDATA[Created by <b>%s</b> on %s.]]></source>
+				<target><![CDATA[Crée par <b>%s</b> le %s.]]></target>
+			</trans-unit>
+			<trans-unit>
+				<source>Last edition on %s.</source>
+				<target>Dernière édition le %s.</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Deleted on %s.</source>
+				<target>Supprimé le %s.</target>
+			</trans-unit>
+
+			<trans-unit>
+				<source><![CDATA[[0] No comment|[1] <b>One</b> comment|(1,Inf] <b>%1%</b> comments]]></source>
+				<target><![CDATA[[0] Aucun commentaire|[1] <b>Un</b> commentaire|(1,Inf] <b>%1%</b> commentaires]]></target>
+			</trans-unit>
+			<trans-unit>
+				<source>Comment</source>
+				<target>Commentaire</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Comments</source>
+				<target>Commentaires</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Comment!</source>
+				<target>Commenter</target>
+			</trans-unit>
+			<trans-unit>
+				<source>You have already commented this article</source>
+				<target>Vous avez déjà commenté cet article</target>
+			</trans-unit>
+
+			<trans-unit>
+				<source>There is nobody in the team.</source>
+				<target>Il n'y a personne dans l'équipe.</target>
+			</trans-unit>
+
+			<trans-unit>
+				<source>Contact us</source>
+				<target>Nous contacter</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Your message</source>
+				<target>Votre message</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Your message has been successfully submitted, We'll read it soon.</source>
+				<target>Votre message nous a bien été envoyé, nous le lirons dès que possible.</target>
+			</trans-unit>
+
+			<trans-unit>
+				<source>End date: %s</source>
+				<target>Date de fin: %s</target>
+			</trans-unit>
+			<trans-unit>
+				<source>ended poll</source>
+				<target>sondage terminé</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Vote</source>
+				<target>Voter</target>
+			</trans-unit>
+
+			<trans-unit>
+				<source>No Contact</source>
+				<target>Aucun message</target>
+			</trans-unit>
+
+			<trans-unit>
+				<source>Are you sure?</source>
+				<target>Êtes-vous sûr ?</target>
+			</trans-unit>
+
+			<trans-unit>
+				<source><![CDATA[[0] 0 point|[1] <b>One</b> point|(1,Inf] <b>%cost%</b> points]]></source>
+				<target><![CDATA[[0] 0 point|[1] <b>Un</b> point|(1,Inf] <b>%cost%</b> points]]></target>
+			</trans-unit>
+			<trans-unit>
+				<source>Stats</source>
+				<target>Statistiques</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Purchase</source>
+				<target>Acheter</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Purchase a gift</source>
+				<target>Acheter un cadeau</target>
+			</trans-unit>
+			<trans-unit>
+				<source>You successfully bought %%gift.name%% for %%gift.price%% %%app.shop.name%%</source>
+				<target>Vous avez bien acheté %%gift.name%% pour %%gift.price%% %%app.shop.name%%</target>
+			</trans-unit>
+
+			<trans-unit>
+				<source>Manage</source>
+				<target>Gérer</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Home</source>
+				<target>Accueil</target>
+			</trans-unit>
+
+			<trans-unit>
+				<source>Join us</source>
+				<target>Nous rejoindre</target>
+			</trans-unit>
+			<trans-unit>
+				<source><![CDATA[You can download the laucher <a href="%link%">here</a>.]]></source>
+				<target><![CDATA[Vous pouvez télécharger le lanceur en cliquant <a href="%link%">ici</a>.]]></target>
+			</trans-unit>
+			<trans-unit>		 
+				<source><![CDATA[You can download directly the config file <a href="%link%">here</a>.]]></source>
+				<target><![CDATA[Vous pouvez télécharger le fichier de configuration directement en cliquant <a href="%link%">ici</a>.]]></target>
+			</trans-unit>
+
+			<trans-unit>
+				<source>Community</source>
+				<target>Communauté</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Poll</source>
+				<target>Sondage</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Polls</source>
+				<target>Sondages</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Board</source>
+				<target>Forum</target>
+			</trans-unit>
+			<trans-unit>
+				<source>There is no poll</source>
+				<target>Il n'y a pas de sondage</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Credit account</source>
+				<target>Créditer votre compte</target>
+			</trans-unit>
+			<trans-unit>
+				<source><![CDATA[Your code is <b>valid</b>, you earned <b>%d</b> %s]]></source>
+				<target><![CDATA[Votre code est <b>valide</b>, vous avez gagné <b>%d</b> %s]]></target>
+			</trans-unit>
+			<trans-unit>
+				<source><![CDATA[Your code is <b>invalid</b>]]></source>
+				<target><![CDATA[Votre code est <b>invalide</b>]]></target>
+			</trans-unit>
+			<trans-unit>
+				<source>Or you can directly join the server on %ip%:%port%.</source>
+				<target>Ou vous pouvez directement rejoindre le serveur sur %ip%:%port%.</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Any rules - but remember to respect everyone.</source>
+				<target>Aucune règle - mais souvenez-vous de respecter tout le monde.</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Frequently Asked Questions</source>
+				<target>Foire aux questions</target>
+			</trans-unit>
+			<trans-unit>
+				<source>The FAQ is empty.</source>
+				<target>La FAQ est vide.</target>
+			</trans-unit>
+
+			<trans-unit>
+				<source>Vote</source>
+				<target>Voter</target>
+			</trans-unit>
+			<trans-unit>
+				<source>You must be logged in to earn %name%</source>
+				<target>Vous devez être connecté pour gagner des %name%</target>
+			</trans-unit>
+			<trans-unit>
+				<source>[-1,0] You don't earn any points, you must wait two hours between each vote|(1,Inf] You earn %points% %name%</source>
+				<target>[-1,0] Vous n'avez gagné aucun point, vous devez attendre 2heures entre chaque vote|(1,Inf] Vous avez gagné %points% %name%</target>
+			</trans-unit>
+
+			<trans-unit>
+				<source>Shop</source>
+				<target>Boutique</target>
+			</trans-unit>
+			<trans-unit>
+				<source>%s to %s %s.</source>
+				<target>%s à %s %s.</target>
+			</trans-unit>
+			<trans-unit>
+				<source>AP</source>
+				<target>PA</target>
+			</trans-unit>
+			<trans-unit>
+				<source>MP</source>
+				<target>PM</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Scope</source>
+				<target>PO</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Damages</source>
+				<target>Dommages</target>
+			</trans-unit>
+			<trans-unit>
+				<source>% Damages</source>
+				<target>% Dommages</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Trap damages</source>
+				<target>Dommages aux pièges</target>
+			</trans-unit>
+			<trans-unit>
+				<source>% Trap damages</source>
+				<target>% Dommages aux pièges</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Critical Hits</source>
+				<target>Coups critiques</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Weight</source>
+				<target>Poids Portable</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Exploration</source>
+				<target>Prospection</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Heal</source>
+				<target>Soins</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Initiative</source>
+				<target>Initiative</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Vitality</source>
+				<target>Vitalité</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Wisdom</source>
+				<target>Sagesse</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Strenght</source>
+				<target>Force</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Intelligence</source>
+				<target>Intelligence</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Chance</source>
+				<target>Chance</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Agility</source>
+				<target>Agilité</target>
+			</trans-unit>
+			<trans-unit>
+				<source>%Neutral res</source>
+				<target>%Res Neutre</target>
+			</trans-unit>
+			<trans-unit>
+				<source>%Earth res</source>
+				<target>%Res Terre</target>
+			</trans-unit>
+			<trans-unit>
+				<source>%Fire res</source>
+				<target>%Res Feu</target>
+			</trans-unit>
+			<trans-unit>
+				<source>%Water res</source>
+				<target>%Res Eau</target>
+			</trans-unit>
+			<trans-unit>
+				<source>%Wind res</source>
+				<target>%Res Air</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Neutral res</source>
+				<target>Res Neutre</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Earth res</source>
+				<target>Res Terre</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Fire res</source>
+				<target>Res Feu</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Water res</source>
+				<target>Res Eau</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Wind res</source>
+				<target>Res Air</target>
+			</trans-unit>
+			<trans-unit>
+				<source>%Neutral res(PvP)</source>
+				<target>%Res Neutre(PvP)</target>
+			</trans-unit>
+			<trans-unit>
+				<source>%Earth res(PvP)</source>
+				<target>%Res Terre(PvP)</target>
+			</trans-unit>
+			<trans-unit>
+				<source>%Fire res(PvP)</source>
+				<target>%Res Feu(PvP)</target>
+			</trans-unit>
+			<trans-unit>
+				<source>%Water res(PvP)</source>
+				<target>%Res Eau(PvP)</target>
+			</trans-unit>
+			<trans-unit>
+				<source>%Wind res(PvP)</source>
+				<target>%Res Air</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Neutral res(PvP)</source>
+				<target>Res Neutre(PvP)</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Earth res(PvP)</source>
+				<target>Res Terre(PvP)</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Fire res(PvP)</source>
+				<target>Res Feu(PvP)</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Water res(PvP)</source>
+				<target>Res Eau(PvP)</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Res Air(PvP)</source>
+				<target>Res Air(PvP)</target>
+			</trans-unit>
+			<trans-unit>
+				<source>PA lost to the cible</source>
+				<target>PA perdus à la cible</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Kill the cible</source>
+				<target>Tue la cible</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Neutral damages</source>
+				<target>Dommages Neutre</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Earth damages</source>
+				<target>Dommages Terre</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Fire damages</source>
+				<target>Dommages Feu</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Water damages</source>
+				<target>Dommages Eau</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Wing damages</source>
+				<target>Dommages Air</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Earth life stealing</source>
+				<target>Vol de vie Terre</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Fire life stealing</source>
+				<target>Vol de vie Feu</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Water life stealing</source>
+				<target>Vol de vie Eau</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Wind life stealing</source>
+				<target>Vol de vie Air</target>
+			</trans-unit>
+
+			<trans-unit>
+				<source>You reached the limit of %max% attempts, wait %time% for retry.</source>
+				<target>Vous avez dépassé la limite de %max% tentatives de connexions, vous devez attendre %time% pour ré-essayer.</target>
+			</trans-unit>
+
+			<trans-unit>
+				<source>Contact messages</source>
+				<target>Tentatives de contact</target>
+			</trans-unit>
+			<trans-unit>
+				<source>No contact.</source>
+				<target>Personne n'a essayé de vous contacter</target>
+			</trans-unit>
+		<!--
+			<trans-unit>
+				<source></source>
+				<target></target>
+			</trans-unit>
+		-->
+			<trans-unit>
+				<source>"%value%" is too short (%min_length% characters min).</source>
+				<target>"%value%" est trop court (%min_length% caractères minimum).</target>
+			</trans-unit>
+			<trans-unit>
+				<source>"%value%" is too long (%max_length% characters max).</source>
+				<target>Trop long (%max_length% caractères maximum).</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Rules</source>
+				<target>Règles</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Admin</source>
+				<target>Administration</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Staff</source>
+				<target>Équipe</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Server</source>
+				<target>Serveur</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Cost</source>
+				<target>Coût</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Level</source>
+				<target>Niveau</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

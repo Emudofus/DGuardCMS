@@ -1,0 +1,26 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Rule
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          rule
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        content:
+          help: <?php echo sfContext::getInstance()->getI18n()->__('You can put the english name, it\'ll be translated') . "\n" ?>
+      list:
+        display: [content]
+      filter:
+        fields:
+          content: { help: '' }
+      form:    ~
+      edit:    ~
+      new:     ~

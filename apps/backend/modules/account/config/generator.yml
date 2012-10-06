@@ -1,0 +1,40 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Account
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          account
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        banned: { label: Is banned }
+        gmlevel: { label: Rank }
+      list:
+        max_per_page: 5
+        display: [=Username, Mail]
+#        layout: stacked
+#		Note for the following: I *HAVE* to use sfContext::...__() because symfony is searching in sf_admin
+        batch_actions:
+          ban:     { label: <?php echo sfContext::getInstance()->getI18n()->__('Ban') ?> }
+          unban:   { label: <?php echo sfContext::getInstance()->getI18n()->__('Unban') ?> }
+          _delete: ~
+        object_actions:
+          ban:     ~
+          unban:   ~
+          _edit:   ~
+          _delete: ~
+      filter:  ~
+      form:
+        display:
+          Parameters: [username, mail, question, reponse]
+          Admin: [gmlevel, banned, points]
+      edit:
+        title: Edit account of "%%username%%"
+      new:     ~

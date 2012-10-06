@@ -1,0 +1,1302 @@
+Rule:
+  connection: accounts
+  columns:
+    content: text
+FAQ:
+  connection: accounts
+  columns:
+    question: text
+    answer: text
+#Nami-D0C: little explanation about my tickets system
+# TicketCategory as Category actAs NestedSet
+# Ticket hasOne Category, i.e. "Dofus > Bugs > Guild" (`category_id`).
+# it can also be stated, i.e. locked, to do, resolved, resolving and deleted.
+# TicketAnswer as Ticket belongsTo Ticket. It's as ALL board systems with topics/posts: A thread (here Ticket) contain answers.
+TicketCategory:
+  actAs: #ok it would be nice if I can use both I18n-able & others but... It's impossible (and I don't like I18n-able so much ...)
+    NestedSet:
+      hasManyRoots: true #I.E. roots: ["D1", "D2", "WTG"]
+  columns:
+    id: int(9)
+    name: varchar(255)
+    icon: varchar(40)
+    description: text
+  relations:
+    Ticket:
+      local: id
+      foreign: category_id
+      alias: Tickets
+      type: many
+Ticket:
+  columns:
+    id: int(9)
+    category_id: int(9)
+    state:
+      type: enum
+      values: [locked, to do, resolved, resolving, deleted]
+    name: varchar(255) #"topic" name
+  relations:
+    TicketCategory:
+      alias: Category
+      local: category_id
+      foreign: id
+    TicketAnswer:
+      local: id
+      foreign: ticket_id
+      alias: Answers
+      type: many
+TicketAnswer:
+  actAs: [Timestampable]
+  columns:
+    id: int(9)
+    ticket_id: int(9)
+    author_id: int(9)
+    content: text
+  relations:
+    Ticket:
+      local: ticket_id
+      foreign: id
+    Account:
+      local: author_id
+      foreign: id
+      alias: Author
+#Andaeriel: little explanation about my polls system:
+# Poll has many Options. Each option has a relation to the poll (`poll_id`). 
+# Polled create a PollAccount (should be renamed into PollOption_Account?).
+# PollAccount make the link between PollOption <=> Account
+# - From a Poll, a Account can be accessed like that: $poll->Options[0]->Polleds[0]->Account
+# - From an Account, a Poll can be accessed like that: $account->Votes[0]->Option->Poll
+Poll:
+  connection: accounts
+  actAs:
+    Timestampable:
+      updated:
+        disabled: true
+  columns:
+    name: string(255)
+    date_start: date
+    date_end: date
+  relations:
+    PollOption:
+      local: id
+      foreign: poll_id
+      type: many
+      alias: Options
+PollOption:
+  connection: accounts
+  columns:
+    poll_id: integer(9)
+    name: string(255)
+  relations:
+    PollAccount:
+      local: id
+      foreign: poll_option_id
+      type: many
+      alias: Polleds
+    Poll:
+      local: poll_id
+      foreign: id
+      type: one
+PollAccount:
+  connection: accounts
+  columns:
+    poll_option_id: integer(9)
+    account_id: integer(9)
+  relations:
+    PollOption:
+       local: poll_option_id
+       foreign: id
+       alias: Option
+    Account:
+      local: account_id
+      foreign: id
+      type: one
+Article: #has_many Comment as Comments; has_one Account as Author
+  connection: accounts
+  actAs: [Timestampable, SoftDelete]
+  columns:
+    title: string(255)
+    content: text
+    author_id: integer(9)
+  relations:
+    Account:
+      local: author_id
+      foreign: id
+      alias: Author
+    Comment:
+      local: id
+      foreign: article_id
+      alias: Comments
+      onDelete: CASCADE
+      type: many
+Comment: #has_one Article; has_one Account as Author
+  connection: accounts
+  actAs: [Timestampable, SoftDelete]
+  columns:
+    article_id: integer(9)
+    author_id: integer(9)
+    content: text
+  relations:
+    Account:
+      local: author_id
+      foreign: id
+      alias: Author
+    Article:
+      local: article_id
+      foreign: id
+Rank:
+  connection: accounts
+  columns:
+    account_id: integer(9)
+    name: string(255)
+  relations:
+    Account:
+      local: account_id
+      foreign: id
+Contact:
+  connection: accounts
+  actAs:
+    Timestampable:
+      updated:
+        disabled: true
+  columns:
+    author_id: integer(9)
+    content: text
+    deleted:
+      type: integer(1)
+      default: 0
+      notnull: true
+  relations:
+    Account:
+      local: author_id
+      foreign: id
+      alias: Author
+Account:
+  connection: accounts
+  tableName: player_accounts
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    username:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    pseudo:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    password:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    mail:
+      type: string(100)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    question:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    reponse:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    gmlevel:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    banned:
+      type: integer(1)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    points:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    timestamp:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    Article:
+      local: id
+      foreign: author_id
+      type: many
+      foreignType: one
+      foreignAlias: Author
+      alias: Articles
+    Comment:
+      local: id
+      foreign: author_id
+      type: many
+      foreignType: one
+      foreignAlias: Author
+      alias: Comments
+    Rank:
+      local: id
+      foreign: account_id
+      type: many
+      alias: Ranks
+    Contact:
+      local: id
+      foreign: author_id
+      type: one
+    PollAccount:
+      local: id
+      foreign: account_id
+      type: many
+      alias: Votes
+    Gift:
+      local: id
+      foreign: account_id
+      type: many
+      alias: Gifts
+Config:
+  connection: accounts
+  columns:
+    key: varchar(255)
+    value: text
+GiftAccount:
+  connection: accounts
+  tableName: accounts_gifts
+  columns:
+    gift_id: int
+    account_id: int
+  relations:
+    Account:
+      local: account_id
+      foreign: id
+    GiftTemplate:
+      local: gift_id
+      foreign: id
+      alias: Gift
+    
+GiftTemplate:
+  connection: others
+  tableName: gift_templates
+  columns:
+    name: varchar(255)
+    description: text
+    img_url: varchar(255)
+    items: varchar(255)
+    price: int
+    max: bool
+  relations:
+    Item:
+      local: items
+      foreign: id
+
+
+Dungeon:
+  connection: others
+  tableName: dungeon
+  columns:
+    startmap:
+      type: integer(2)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    mapid:
+      type: integer(2)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    cellid:
+      type: integer(2)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    Map:
+      local: mapid
+      foreign: id
+      type: one
+Exp:
+  connection: others
+  tableName: exp_data
+  columns:
+    level:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    character:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    job:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    mount:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    pvp:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+Item:
+  connection: others
+  tableName: items_data
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    name:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    type:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    level:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    weight:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    weaponinfo:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    twohands:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    isethereal:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    forgemageable:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    isbuff:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    usable:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    targetable:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    price:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    conditions:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    stats:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+Pano:
+  connection: others
+  tableName: items_pano
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    nom:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    items:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    effects2:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    effects3:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    effects4:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    effects5:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    effects6:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    effects7:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    effects8:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+Map:
+  connection: others
+  tableName: maps_data
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    width:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    height:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    mapdata:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    decryptkey:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    createtime:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    monsters:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    maximummonster:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    maximumgroup:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    Dungeon:
+      local: id
+      foreign: mapid
+      type: one
+    NpcMap:
+      local: id
+      foreign: mapid
+      type: many
+      alias: NPCs
+    MapTrigger:
+      local: id
+      foreign: mapid
+      type: many
+      alias: Triggers
+    Zaap:
+      local: id
+      foreign: mapid
+      type: one
+    Zaapi:
+      local: id
+      foreign: mapid
+      type: one
+MapObject:
+  connection: others
+  tableName: maps_objects
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    name:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    walkable:
+      type: integer(1)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    objectlist:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    actionlist:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    respawn:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+MapTrigger:
+  connection: others
+  tableName: maps_triggers
+  columns:
+    id:
+      type: integer(8)
+      autoincrement: true
+      primary: true
+    mapid:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    cellid:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    newmap:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+  relations:
+    Map:
+      local: mapid
+      foreign: id
+      alias: StartMap
+MonsterLevel:
+  connection: others
+  tableName: monster_levels
+  columns:
+    id:
+      type: integer(8)
+      autoincrement: true
+      primary: true
+    templateid:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    level:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    pa:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    pm:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    vie:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    size:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    caracts:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    resistances:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    spells:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    Monster:
+      local: templateid
+      foreign: id
+      type: one
+Monster:
+  connection: others
+  tableName: monster_templates
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    color1:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    color2:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    color3:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    skin:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    nom:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    exp:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    kamas:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    drop:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    ai:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    MonsterLevel:
+      local: id
+      foreign: templateid
+      alias: Levels
+      type: many
+NpcQuestion:
+  connection: others
+  tableName: npc_question
+  columns:
+    npcid:
+      type: integer(3)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    questionid:
+      type: integer(3)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    responses:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    NPC:
+      local: npcid
+      foreign: ID
+      type: one
+NpcResponse:
+  connection: others
+  tableName: npc_response
+  columns:
+    responseid:
+      type: integer(3)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    type:
+      type: integer(1)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    args:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+NpcMap:
+  connection: others
+  tableName: npcs_maps
+  columns:
+    id:
+      type: integer(8)
+      autoincrement: true
+      primary: true
+    mapid:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    templateid:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    cell:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    dir:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    Map:
+      local: mapid
+      foreign: id
+      type: one
+    NPC:
+      local: templateid
+      foreign: id
+      type: one
+Npc:
+  connection: others
+  tableName: npcs_templates
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    name:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    gfx:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    size:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    sex:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    color1:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    color2:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    color3:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    items:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    artwork:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    bonus:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    sellinglist:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+  relations:
+    NpcMap:
+      local: id
+      foreign: templateid
+      type: many
+      alias: Maps
+    NpcQuestion:
+      local: id
+      foreign: npcid
+      type: many
+      alias: Questions
+Server:
+  connection: others
+  tableName: servers_list
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    ip:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    port:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    system_port:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+Spell:
+  connection: others
+  tableName: spells_data
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    nom:
+      type: string(100)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    sprite:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      default: '-1'
+      notnull: true
+      autoincrement: false
+    spriteinfos:
+      type: string(20)
+      fixed: false
+      unsigned: false
+      primary: false
+      default: '0,0,0'
+      notnull: true
+      autoincrement: false
+    lvl1:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    lvl2:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    lvl3:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    lvl4:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    lvl5:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    lvl6:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    SpellLearn:
+      local: id
+      foreign: spellid
+      type: one #no multi-classes spells :p
+SpellLearn:
+  connection: others
+  tableName: spells_learn
+  columns:
+    id:
+      type: integer(8)
+      autoincrement: true
+      primary: true
+    classe:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    level:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    spellid:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    position:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      default: '-1'
+      notnull: true
+      autoincrement: false
+  relations:
+    Spell:
+      local: spellid
+      foreign: id
+      type: one
+Zaap:
+  connection: others
+  tableName: zaaps
+  columns:
+    id:
+      type: integer(8)
+      autoincrement: true
+      primary: true
+    mapid:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    cellid:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    Map:
+      local: mapid
+      foreign: id
+      type: one
+Zaapi:
+  connection: others
+  tableName: zaapis
+  columns:
+    id:
+      type: integer(8)
+      autoincrement: true
+      primary: true
+    mapid:
+      type: integer(3)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    cellid:
+      type: integer(3)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    zone:
+      type: integer(1)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    Map:
+      local: mapid
+      foreign: id
+      type: one

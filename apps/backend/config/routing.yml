@@ -1,0 +1,121 @@
+server:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Server
+    module:               server
+    prefix_path:          /server
+    column:               id
+    with_wildcard_routes: true
+
+exp:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Exp
+    module:               exp
+    prefix_path:          /exp
+    column:               level
+    with_wildcard_routes: true
+
+zaapi:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Zaapi
+    module:               zaapi
+    prefix_path:          /zaapi
+    column:               Array
+    with_wildcard_routes: true
+
+zaap:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Zaap
+    module:               zaap
+    prefix_path:          /zaap
+    column:               mapid
+    with_wildcard_routes: true
+
+rule:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Rule
+    module:               rule
+    prefix_path:          /rule
+    column:               id
+    with_wildcard_routes: true
+
+account:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Account
+    module:               account
+    prefix_path:          /account
+    column:               id
+    with_wildcard_routes: true
+
+faq:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                FAQ
+    module:               faq
+    prefix_path:          /FAQ
+    column:               id
+    with_wildcard_routes: true
+
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+Rank:
+  url: /Staff
+  param: { module: Staff }
+Rank_show:
+  url: /Staff/:user
+  param: { module: Staff, action: show }
+Rank_new:
+  url: /Staff/:user/new
+  param: { module: Staff, action: new }
+Rank_create:
+  url: /Staff/:user/create
+  param: { module: Staff, action: create }
+Rank_delete:
+  url: /Staff/:user/delete/:id
+  param: { module: Staff, action: delete }
+
+Poll:
+  class: sfDoctrineRouteCollection
+  options:
+    module: Poll
+    model: Poll
+    prefix_path: /Poll
+    with_show: true
+PollOption_new:
+  url: /Poll/:poll/new
+  param: { module: PollOption, action: new }
+PollOption_create:
+  url: /Poll/:poll/create
+  param: { module: PollOption, action: create }
+PollOption_edit:
+  url: /Poll/:poll/edit/:option
+  param: { module: PollOption, action: edit }
+PollOption_update:
+  url: /Poll/:poll/update/:option
+  param: { module: PollOption, action: update }
+PollOption_delete:
+  url: /Poll/:poll/delete/:option
+  param: { module: PollOption, action: delete }
+PollOption_show:
+  url: /Poll/:poll/show/:option
+  param: { module: PollOption, action: show }
+
+Stat: # ok, ATM it's useless ...
+  url: /Stat
+  param: { module: Stat }
+
+# default rules
+homepage:
+  url:   /
+  param: { module: Stats, action: index }
+default_index:
+  url:   /:module
+  param: { action: index }
+default:
+  url:   /:module/:action/*

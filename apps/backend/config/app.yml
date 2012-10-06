@@ -1,0 +1,6 @@
+all:
+  polls:
+    by_page: 5
+  bot:
+    mail: noreply@bot.com
+    name: MailerBot

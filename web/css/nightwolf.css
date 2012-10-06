@@ -1,0 +1,102 @@
+body {
+	background-color: #f6f6f6;
+	font-family:Verdana;
+}
+#Header {
+	background: url(../images/NightWolfTemplate/header.png)no-repeat top center;
+	height: 238px;
+}
+
+#Header .connexion{
+	margin:75px 0 0 550px;
+	float:left;
+}
+
+#Header .connexion span{
+	font-size:13px;
+	margin:0 0 0 5px;
+}
+
+#conteneur{
+	margin:0 auto;
+	width:806px;
+}
+
+#menu{
+	width:206;
+	float:left;
+}
+
+#menu .categorie_menu_header{
+	background: url(../images/NightWolfTemplate/head_menu.png)no-repeat;
+	width: 206px;
+	height:18px;
+}
+
+#menu .content{
+	background: url(../images/NightWolfTemplate/content_menu.png)repeat-y;
+	width:206px;
+}
+
+#menu .title{
+	font-size:19px;
+	margin:0 0 0 20px;
+}
+
+#menu .categorie a{
+	font-size:12px;
+	text-decoration:none;
+	color:#000000;
+}
+
+#menu .categorie ul{
+		list-style-type:none;
+}
+
+#menu .end{
+	background: url(../images/NightWolfTemplate/footer_menu.png)no-repeat;
+	width:206px;
+	height:11px;
+	margin:-16px 0 0 0;
+}
+
+#content{
+	width:608px;
+	margin:0 0 0 210px;
+}
+
+#content .content_header{
+	width:608px;
+	height:18px;
+	background: url(../images/NightWolfTemplate/header_news.png)no-repeat;
+}
+
+#content .title{
+	font-size:17px;
+	padding:3px 0 5px 10px;
+	color:#FFFFFF;
+	height:33px;
+	background: url(../images/NightWolfTemplate/content_backnews.png)no-repeat;
+}
+
+#content .content_news{
+	width:608px;
+	background: url(../images/NightWolfTemplate/content_news.png)repeat-y;
+	font-size:13px;
+	padding:0 0 0 30px;
+}
+#content .content_news  .title a {
+	color: white;
+}
+
+#content .news{
+	width:550px;
+}
+
+#content .endnews{
+	height:88px;
+	width:608px;
+	background: url(../images/NightWolfTemplate/footer_global.png)no-repeat;
+/*Andaeriel: some changes because of some strange differences*/
+	margin-left:7px;
+}

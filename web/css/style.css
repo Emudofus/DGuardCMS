@@ -1,0 +1,510 @@
+/*//////// Design & Code by BlackStar //////*/
+/*////////////// 14/12/2010 ////////////////*/
+/*////////// © Tous droits réservés ////////*/
+
+body {
+    background-color: #121212;
+    background-image: url("../images/durkle/background/bg-full.jpg");
+    background-position: center top;
+    background-repeat: repeat;
+    margin: auto;
+}
+#page {
+    background-image: url("../images/durkle/background/bg.jpg");
+    background-position: center top;
+    margin: auto;
+    min-height: 1500px;
+    position: relative;
+    width: 1000px;
+}
+
+/*////// PRE-HEADER //////*/
+div#pre-header{
+	background: url("../images/durkle/squelette/pre-header/barre-bg.png") repeat-x;
+	height: 50px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 6500;
+}
+img.s-a_logomini{
+	margin-left:185px;
+}
+div.up_separator{
+	position:relative;
+	width:1px;
+	height:23px;
+	background: url("../images/durkle/squelette/pre-header/up_separator.png") no-repeat;
+}
+
+/*/ up-login /*/
+div#up-login{
+	position:absolute;
+	margin:-35px 0 0 500px;
+}
+div.login{
+	background: url("../images/durkle/squelette/pre-header/up-login/input-login.png") no-repeat;
+	width:130px;
+	height:22px;
+	position:absolute;
+}
+div.pass{
+	background: url("../images/durkle/squelette/pre-header/up-login/input-login.png") no-repeat;
+	width:130px;
+	height:22px;
+	margin-left:140px;
+	position:absolute;
+}
+
+form.champs input#inputlogin{
+	background:transparent;
+	border:0;text-indent:4px;
+	padding-top:2px;
+	color:#000000;
+}
+form.champs input#inputlogin:focus{
+	background:url("../images/durkle/squelette/pre-header/up-login/input-login-focus.png") no-repeat;
+}
+form.champs input#inputpassword{
+	background:transparent;border:0;
+	text-indent:4px;
+	padding-top:2px;
+	color:#000000;
+}
+form.champs input#inputpassword:focus{
+	background:url("../images/durkle/squelette/pre-header/up-login/input-login-focus.png") no-repeat;
+}
+form.champs input.seconnecter{
+	cursor:pointer;
+	background:transparent;
+	border:0;width:27px;
+	height:25px;
+	background: url("../images/durkle/squelette/pre-header/up-login/btn-ok.png") no-repeat;
+	position:absolute;
+	margin:-1px 0 0 280px;
+}
+form.champs input.seconnecter:hover{
+	width:27px;
+	height:25px;
+	background: url("../images/durkle/squelette/pre-header/up-login/btn-ok.png") 0 -25px;
+	background-repeat:no-repeat;
+}
+
+a.join-up{
+	margin:3px 0 0 340px;
+	display:block;
+	width:69px;
+	height:15px;
+	background: url("../images/durkle/squelette/pre-header/join.png") no-repeat;
+}
+a.join-up:hover{
+	background: url("../images/durkle/squelette/pre-header/join.png") 0 15px;
+}
+a.passlost-up{
+	margin:-26px 0 0 433px;
+	display:block;
+	width:126px;
+	height:21px;
+	background: url("../images/durkle/squelette/pre-header/pass-lost.png") no-repeat;
+}
+a.passlost-up:hover{
+	background: url("../images/durkle/squelette/pre-header/pass-lost.png") 0 21px repeat-y;
+}
+#sep0{ margin:-14px 425px; }
+
+/*/ up-gestion /*/
+div#up-gestion{
+	position:absolute;
+	margin:-35px 0 0 420px;
+	font-size:10px;
+}
+div.mail-up{
+	position:absolute;
+	margin:4px 0 0 0px;
+}
+a.mail-up{
+	margin-top:-1px;
+	float:left;
+	display:block;
+	width:25px;
+	height:15px;
+	background: url("../images/durkle/squelette/pre-header/mail.png") no-repeat
+}
+a.no_mail-up{
+	margin-top:0px;
+	padding-right:3px;
+	float:left;
+	display:block;
+	width:16px;
+	height:14px;
+	background: url("../images/durkle/squelette/pre-header/no_mail.png") no-repeat;
+}
+#sep1{ margin:4px 200px; }
+
+.bjr{
+	position:absolute;
+	margin:-26px 0 0 206px;
+}
+.nplayer{
+	text-decoration:underline;
+}
+a.close-up{
+	margin-top:-3px;
+	float:left;
+	display:block;
+	width:24px;
+	height:20px;
+	background: url("../images/durkle/squelette/pre-header/close.png") no-repeat;
+}
+a.close-up:hover{
+	background: url("../images/durkle/squelette/pre-header/close.png") 0 20px;
+}
+.bjr-txt{
+	color:#FFF;
+	display:inline;
+	margin-left:3px;
+}
+#sep2{ margin:-27px 335px; }
+.abo{
+	position:absolute;
+	margin:5px 0 0 340px;
+}
+.abo-ok{
+	color:#c015ca;
+}
+div#up-gestion a:hover{
+	color:#c015ca;text-decoration:underline;
+}
+span.abo-up{
+	margin-top:-3px;
+	float:left;
+	display:block;
+	width:22px;
+	height:20px;
+	background: url("../images/durkle/squelette/pre-header/abo.png") no-repeat;
+}
+#sep3{ margin:4px 490px; }
+
+div#up-gestion .points{
+	position:absolute;
+	margin:-29px 0 0 497px;
+}
+#sep4{ margin:-27px 560px; }
+
+.gcompte{
+	position:absolute;
+	margin:5px 0 0 568px;
+}
+
+/*////// HEADER //////*/
+div#header{width:900px;height:343px;margin:auto;background: url("../images/durkle/squelette/header/header.jpg") no-repeat;}
+img.s-a_logo{margin:40px 0 0 430px;}
+/*////// NAVIGATION //////*/
+#navigbar{width:900px;height:98px;background: url("../images/durkle/squelette/navigbar/bg.jpg") no-repeat;margin:auto;}
+#navbar{margin-left:69px;padding-top:10px;}
+#navbar a
+{
+	background:url("../images/durkle/squelette/navigbar/navbar.png") repeat scroll 0 0 transparent;
+	background-repeat:no-repeat;
+	display:block;
+	float:left;
+	height:64px;
+}
+
+#navbar .navAccueil
+{
+	background-position:0 0;
+	width:152px;
+}
+#navbar .navAccueil:hover
+{
+	background-position:0 -65px;
+	width:152px;
+}
+
+#navbar .navForum
+{
+	background-position:-152px 0;
+	width:153px;
+}
+#navbar .navForum:hover
+{
+	background-position:-152px -65px;
+	width:153px;
+}
+#navbar .navBoutique
+{
+	background-position:-305px 0;
+	width:153px;
+}
+#navbar .navBoutique:hover
+{
+	background-position:-305px -65px;
+	width:153px;
+}
+#navbar .navClassement
+{
+	background-position:-457px 0;
+	width:153px;
+}
+#navbar .navClassement:hover
+{
+	background-position:-457px -65px;
+	width:153px;
+}
+
+#navbar .navSupport
+{
+	background-position:-610px 0;
+	width:153px;
+}
+#navbar .navSupport:hover
+{
+	background-position:-610px -65px;
+	width:153px;
+}
+/*////// PRE-CONTENT //////*/
+div#pre-content{width:900px;height:232px;background: url("../images/durkle/squelette/pre-content/bg.jpg") no-repeat;margin:auto;}
+/*////// panel-login //////*/
+div#bloc-login{width:258px;height:232px;float:left;}
+div#cadre_login{width:238px;height:210px;background: url("../images/durkle/squelette/pre-content/panel-login/cadre-login.jpg") no-repeat;margin:10px auto;}
+div#cadre_login div.login{background: url("../images/durkle/squelette/pre-content/panel-login/input.png") no-repeat;width:205px;height:34px;margin:32px 15px;position:absolute;}
+div#cadre_login div.pass{background: url("../images/durkle/squelette/pre-content/panel-login/input.png") no-repeat;width:205px;height:34px;margin:97px 15px;position:absolute;}
+div#cadre_login form.champs input#inputlogin{background:transparent;border:0;text-indent:6px;padding-top:0px;color:#000000;width:205px;height:34px;}
+div#cadre_login form.champs input#inputlogin:focus{color:#FFFFFF;font-size:16px;background:url("../images/durkle/squelette/pre-content/panel-login/input-focus.png") no-repeat;}
+div#cadre_login form.champs input#inputpassword{background:transparent;border:0;text-indent:6px;padding-top:0px;color:#000000;width:205px;height:34px;}
+div#cadre_login form.champs input#inputpassword:focus{color:#FFFFFF;font-size:14px;background:url("../images/durkle/squelette/pre-content/panel-login/input-focus.png") no-repeat;}
+div#cadre_login form.champs input.seconnecter{cursor:pointer;background:transparent;border:0;width:167px;height:41px;background: url("../images/durkle/squelette/pre-content/panel-login/se-connecter.png") no-repeat;position:absolute;margin:140px 35px;}
+div#cadre_login form.champs input.seconnecter:hover{width:167px;height:41px;background: url("../images/durkle/squelette/pre-content/panel-login/se-connecter.png") 0 -41px;background-repeat:no-repeat;}
+a.passlost{position:absolute;margin:185px 0 0 33px;display:block;width:169px;height:21px;background: url("../images/durkle/squelette/pre-content/panel-login/pass_lost.png") no-repeat;}
+a.passlost:hover{background: url("../images/durkle/squelette/pre-content/panel-login/pass_lost.png") 0 21px;}
+
+/*////// panel-gestion //////*/
+div#cadre_gestion{width:238px;height:210px;background: url("../images/durkle/squelette/pre-content/panel-gestion/cadre.jpg") no-repeat;margin:10px auto;}
+div.cadre_avatar{width:84px;height:84px;background: url("../images/durkle/squelette/pre-content/panel-gestion/cadre_avat.png") no-repeat;position:absolute;margin:10px 0 0 10px;}
+p.welcome{color:#FFFFFF;text-shadow: 0 0 0.4em #FFFFFF;font-weight:bold;position:absolute;margin:15px 0 0 100px;}
+div.bg_point{width:78px;height:26px;position:absolute;margin:38px 0 0 125px;}
+p.points{position:absolute;margin-top:5px;text-align:center;width:78px;color:#FFFFFF;font-weight:bold;}
+div.barre_vote{width:103px;height:17px;background: url("../images/durkle/squelette/pre-content/panel-gestion/barre_vote.png") no-repeat;position:absolute;margin:70px 0 0 113px;}
+p.nbr_vote{color:#FFFFFF;width:103px;text-align:center;margin-top:-17px;}
+div.link_gestion{width:220px;height:110px;position:absolute;margin:110px 0 0 20px;}
+a.link_mail{position:absolute;margin:0px 0 0 5px;font-variant: small-caps}
+a.link_clef{position:absolute;margin:2px 0 0 15px;font-variant: small-caps}
+a.link_achat{position:absolute;margin:5px 0 0 11px;font-variant: small-caps}
+a.link_close{position:absolute;margin:5px 0 0 7px;color:red;font-variant: small-caps;font-size:14px;}
+div.link_gestion a:hover{text-decoration:underline;}
+
+/*////// CARROUSEL //////*/
+div#carrousel{
+	top:15px;
+	width:508px;
+	height:178px;
+	background: url("scroller/bg_carrousel.jpg") no-repeat;
+	position:relative;
+	margin-left:325px;
+	overflow:hidden;
+	padding:4px 0 0 5px;
+}
+div.slide{
+	position:absolute;
+	top:3px;
+	left:4px;
+	width:503px;
+	height:169px;
+}
+div.title{
+	color:#aaaaad;
+	background: url("scroller/bg_title.png") no-repeat;
+	width:500px;
+	height:65px;
+	bottom:0;
+	left:0;
+	position:absolute;
+	padding-left:10px;
+}
+div.title p{ margin:5px auto; }
+div.navigation{
+	width:136px;
+	height:25px;
+	background: url("scroller/bg_pagination.png") no-repeat;
+	position:absolute;
+	margin:17px 0 0 510px;
+	padding:4px 0 0 18px;
+}
+div.navigation span{
+	font-size:15px;background: url("scroller/puce_pag.png") no-repeat;
+	width:16px;
+	height:17px;
+	color:#000;
+	padding:0px 5px;
+	margin:4px;
+	cursor:pointer;
+}
+div.navigation span:hover,div.navigation span.active{background: url("scroller/puce_pag_h_a.png") no-repeat;color:#FFF;}
+span.prec{cursor:pointer;position:absolute;margin:-100px 0 0 287px;background: url("scroller/left.png") no-repeat;display:block;width:31px;height:43px;}
+span.prec:hover{background: url("scroller/left_hover.png") no-repeat;}
+span.suiv{cursor:pointer;position:absolute;margin:-100px 0 0 840px;background: url("scroller/right.png") no-repeat;display:block;width:31px;height:43px;}
+span.suiv:hover{background: url("scroller/right_hover.png") no-repeat;}
+
+/*////// INS-VOTE //////*/
+div#ins_vote{width:900px;height:64px;margin:auto;}
+a.join{position:absolute;margin:5px 0 0 40px;display:block;width:190px;height:58px;background: url("../images/durkle/squelette/ins_vote/join.png") no-repeat;}
+a.join:hover{background: url("../images/durkle/squelette/ins_vote/join.png") 0 58px;}
+a.vote{position:absolute;margin:5px 0 0 670px;display:block;width:190px;height:58px;background: url("../images/durkle/squelette/ins_vote/vote.png") no-repeat;}
+a.vote:hover{background: url("../images/durkle/squelette/ins_vote/vote.png") 0 58px;}
+div#promo_acc{width:383px;height:58px;background: url("../images/durkle/squelette/ins_vote/promo_acc.png") no-repeat;position:absolute;margin:5px 0 0 260px;padding-top:2px;}
+p#mess_acc{color:#FFF;line-height:18px;text-align:center;}
+
+/*////// LEFT_COLONNE //////*/
+div#left_col{width:260px;float:left;margin-left:50px;padding-top:5px;}
+/*////// MENU //////*/
+/*#menu{width:245px;height:240px;background: url("../images/durkle/squelette/left_col/menu/bg.png") no-repeat;margin:auto;padding-bottom:10px;}
+#menu-link{position:absolute;margin:43px 0 0 8px;}
+#menu-link a{background:url("../images/durkle/squelette/left_col/menu/link.jpg") repeat scroll 0 0 transparent;background-repeat:no-repeat;display:block;height:27px;}
+#menu-link .menuItem span{background-position:0 0;width:229px;}
+#menu-link .menuItem:hover, #menu-link .menuItem a{background-position:-229px 0px;width:229px;}
+/*#menu-link .menuItem2{background-position:0 -27px;width:229px;}
+#menu-link .menuItem2:hover, #menu-link .menuItem2_a{background-position:-229px -27px;width:229px;}
+#menu-link .menuItem3{background-position:0 -54px;width:229px;}
+#menu-link .menuItem3:hover, #menu-link .menuItem3_a{background-position:-229px -54px;width:229px;}
+#menu-link .menuForum{background-position:0 -81px;width:229px;}
+#menu-link .menuForum:hover, #menu-link .menuForum_a{background-position:-229px -81px;width:229px;}
+#menu-link .menuLivredor{background-position:0 -108px;width:229px;}
+#menu-link .menuLivredor:hover, #menu-link .menuLivredor_a{background-position:-229px -108px;width:229px;}
+#menu-link .menuArmurerie{background-position:0 -135px;width:229px;}
+#menu-link .menuArmurerie:hover, #menu-link .menuArmurerie_a{background-position:-229px -135px;width:229px;}
+#menu-link .menuItemviewer{background-position:0 -162px;width:229px;}
+#menu-link .menuItemviewer:hover, #menu-link .menuItemviewer_a{background-position:-229px -162px;width:229px;}*/
+/* NEW VERSION - WORKING ONE ! */
+#menu{width:245px;height:240px;background: url("../images/durkle/squelette/left_col/menu/box.png") no-repeat;margin:auto;padding-bottom:10px;}
+#menutop{width:245px;height:43px;background: url("../images/durkle/squelette/left_col/menu/top.png") no-repeat;margin:auto;}
+#menubg{width:245px;background: url("../images/durkle/squelette/left_col/menu/bg.png") repeat-y;margin:auto;}
+#menubot{width:245px;height:9px;background: url("../images/durkle/squelette/left_col/menu/bot.png") no-repeat;margin:auto;padding-bottom:10px;}
+ul#menu-link{margin:0px 0 0 8px;list-style:none;}
+ul#menu-link li{line-height:20px;vertical-align:middle;text-align:center;}
+ul#menu-link li#btn_1{width:229px;height:27px;background:url("../images/durkle/squelette/left_col/menu/btn_1.jpg") no-repeat;display:block;}
+ul#menu-link li#btn_1:hover, ul#menu-link  li a#btn_1.active{background:url("../images/durkle/squelette/left_col/menu/btn_1.jpg") 0 27px;}
+ul#menu-link li#btn_2{width:229px;height:27px;background:url("../images/durkle/squelette/left_col/menu/btn_2.jpg") no-repeat;display:block;}
+ul#menu-link li#btn_2:hover, ul#menu-link  li a#btn_2.active{background:url("../images/durkle/squelette/left_col/menu/btn_2.jpg") 0 27px;}
+ul#menu-link li#btn_3{width:229px;height:27px;background:url("../images/durkle/squelette/left_col/menu/btn_3.jpg") no-repeat;display:block;}
+ul#menu-link li#btn_3:hover, ul#menu-link  li a#btn_3.active{background:url("../images/durkle/squelette/left_col/menu/btn_3.jpg") 0 27px;}
+ul#menu-link li:nth-child(odd) {width:229px;height:27px;background:url("../images/durkle/squelette/left_col/menu/btn_2.jpg") no-repeat;display:block;}
+ul#menu-link li:nth-child(odd):hover, ul#menu-link  li a#btn_p.active{background:url("../images/durkle/squelette/left_col/menu/btn_2.jpg") 0 27px;}
+ul#menu-link li:nth-child(even) {width:229px;height:27px;background:url("../images/durkle/squelette/left_col/menu/btn_3.jpg") no-repeat;display:block;}
+ul#menu-link li:nth-child(even):hover, ul#menu-link  li a#btn_i.active{background:url("../images/durkle/squelette/left_col/menu/btn_3.jpg") 0 27px;}
+
+/*////// STATS SERV //////*/
+#stats_serv{width:245px;height:240px;background: url("../images/durkle/squelette/left_col/stats_serv/bg.png") no-repeat;margin:auto;padding-bottom:10px;}
+div.stats_glob{color:#FFF;font-size:16px;width:230px;height:80px;background: url("../images/durkle/squelette/left_col/stats_serv/cadre_stats.png") no-repeat;position:absolute;margin:40px 0 0 7px;}
+p.nbrc{position:absolute;margin:15px 0 0 175px;}
+p.nbrp{position:absolute;margin:45px 0 0 175px;}
+div.stats_live{color:#FFF;font-size:16px;width:230px;height:117px;background: url("../images/durkle/squelette/left_col/stats_serv/cadre_live.png") no-repeat;position:absolute;margin:120px 0 0 7px;}
+p.name_type{position:absolute;margin:15px 0 0 15px;}
+img.statu{position:absolute;margin:15px 0 0 165px;}
+div.barre_pourc{width:205px;height:22px;background: url("../images/durkle/squelette/left_col/stats_serv/barre_pourc.png") no-repeat;position:absolute;margin:50px 0 0 13px;}
+a#nextlink{position:absolute;margin:205px 0 0 155px;display:block;width:67px;height:20px;background: url("../images/durkle/squelette/left_col/stats_serv/next.jpg") no-repeat;}
+a#nextlink:hover{background: url("../images/durkle/squelette/left_col/stats_serv/next.jpg") 0 20px;}
+a#backlink{position:absolute;margin:205px 0 0 20px;display:block;width:67px;height:20px;background: url("../images/durkle/squelette/left_col/stats_serv/back.jpg") no-repeat;}
+a#backlink:hover{background: url("../images/durkle/squelette/left_col/stats_serv/back.jpg") 0 20px;}
+/*////// lien vers officiel //////*/
+a.link_officiel{margin:auto;display:block;width:223px;height:122px;background: url("../images/durkle/squelette/left_col/link_officiel.png") no-repeat;}
+a.link_officiel:hover{background: url("../images/durkle/squelette/left_col/link_officiel.png") 0 122px;}
+
+/*////// CONTENT //////*/
+#content{width:646px;margin:5px 0 0 310px;}
+/*////// BLOC NEWS //////*/
+#newsBlock .news{width:640px;height:276px;display:block;}
+#newsBlock .news h2{font-family: Trebuchet MS,arial,sans-serif;padding:4px 0 0 40px;cursor:default;}
+#newsBlock .news.disabled h2{font-size:15px;color:#7d7d7d;}
+#newsBlock .news.opened h2{font-size:16px;color:#FFFFFF;}
+#newsBlock .news h2 span.newsdate{color:#7d7d7d;display:block;float:right;font-family:Arial,Helvetica,sans-serif;font-size:10px;margin-right:18px;}
+#newsBlock .news h2 span.newsdate.hoverDate{color:#FFFFFF;}
+#newsBlock .news.opened{background: url("../images/durkle/squelette/content/news/bg_opened.jpg") no-repeat;}
+#newsBlock .news.disabled{background: url("../images/durkle/squelette/content/news/bg_disabled.jpg") no-repeat;height:28px;}
+div.bg_aut{width:123px;height:122px;background: url("../images/durkle/squelette/content/news/cadre_avat.jpg") no-repeat;float:left;padding:3px 0 0 4px;}
+#newsBlock .news .newscontent{background: url("../images/durkle/squelette/content/news/bg_txt.jpg") no-repeat;width:566px;height:190px;margin:23px 0 0 38px;padding:5px;}
+#newsBlock .news .newscontent .newstxt{color:#939393;font-family:Arial,Trebushet MS,sans-serif;font-size:13px;line-height:17px;width:419px;height:300px;margin-left:138px;}
+#newsBlock .news.disabled h2.hoverAction:hover{color:#ffffff;cursor:pointer;}
+.readmoreline{
+	background: url("../images/durkle/squelette/content/news/more.png") no-repeat;
+	width:135px;
+	height:14px;
+	display:block;
+	position: absolute;
+	margin:-12px 0 0 430px;
+}
+.readmoreline:hover{
+	background: url("../images/durkle/squelette/content/news/more.png") 0 14px repat-y;
+	background-position: bottom left;
+}
+.comment{background: url("../images/durkle/squelette/content/news/comment.png") no-repeat;width:200px;height:12px;text-indent:20px;margin:20px 0 0 0px;}
+.comment a:hover{color:#543f5d;}
+
+/*////// EVENEMENT //////*/
+#event{width:639px;height:210px;background: url("../images/durkle/squelette/content/evenement/bg.png") no-repeat;margin-top:8px;}
+.title_event{color:#FFF;font-size:15px;text-shadow: 0 0 0.4em #FFFFFF;position:absolute;margin:14px 0 0 215px;}
+.event_descrip{width:194px;height:109px;background: url("../images/durkle/squelette/content/evenement/bg_descrip.jpg") no-repeat;position:absolute;margin:90px 0 0 8px;}
+.txt_descrip{color:#FFF;font-size:12px;text-shadow: 0 0 0.4em #FFFFFF;padding:5px;}
+.event_but{width:194px;height:109px;position:absolute;margin:90px 0 0 240px;}
+ul.list_but{list-style-image: url("../images/durkle/squelette/content/evenement/puce_but.png");line-height:20px;}
+li.but{color:#FFF;font-size:12px;text-shadow: 0 0 0.2em #FFFFFF;}
+.event_rec{width:194px;height:109px;position:absolute;margin:90px 0 0 453px;}
+.rec{width:36px;height:35px;background: url("../images/durkle/squelette/content/evenement/cadre_rec.png") no-repeat;}
+.no_rec{width:36px;height:35px;background: url("../images/durkle/squelette/content/evenement/cadre_no_rec.png") no-repeat;}
+#rec_1{position:absolute;margin:5px 0 0 -5px;}
+#rec_2{position:absolute;margin:5px 0 0 40px;}
+#rec_3{position:absolute;margin:5px 0 0 85px;}
+#rec_4{position:absolute;margin:5px 0 0 130px;}
+.img_rec{margin:1px 0 0 2px;}
+.time_left{width:142px;height:54px;background: url("../images/durkle/squelette/content/evenement/bg_time.jpg") no-repeat;position:absolute;margin:145px 0 0 465px;}
+.time{color:#FFF;font-size:12px;position:absolute;margin:28px 0 0 17px;text-align:center;}
+.more_descrip{
+	width:89px;
+	height:14px;
+	background: url("../images/durkle/squelette/content/evenement/more.png") no-repeat;
+	display:block;
+	position:absolute;
+	margin:15px 0 0 500px;
+}
+.more_descrip:hover{
+	background: url("../images/durkle/squelette/content/evenement/more.png") 0 14px repeat-y;
+}
+
+
+#footer {
+    margin: auto auto 30px;
+    width: 980px;
+}
+.footer_sep {
+    background: url("../images/durkle/squelette/footer/separator.png") no-repeat;
+    display: block;
+    height: 35px;
+    margin-top: -5px;
+	margin-left:50px;
+    width: 900px;
+}
+.footercontent {
+    margin:auto;
+    width: 900px;
+}
+#footernav {
+    margin-left: auto;
+    margin-top: 5px;
+    text-align: center;
+	font-weight:bold;
+	color:#41174f;
+}
+#footernav a {
+    padding: 10px;
+    text-decoration: none;
+}
+#footernav a:hover {
+	color:#41174f;
+	text-shadow: 0 0 0.4em #41174f;
+}
+#copyright {
+    color: #FFFFFF;
+    display: block;
+    text-align: center;
+}

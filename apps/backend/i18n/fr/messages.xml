@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+	<file source-language="EN" target-language="fr" datatype="plaintext" original="messages" date="2010-10-20T10:55:12Z" product-name="messages">
+		<header />
+		<body>
+			<trans-unit>
+				<source>Name</source>
+				<target>Nom</target>
+			</trans-unit>
+
+			<trans-unit>
+				<source><![CDATA[You can put the <b>english</b> name, it'll be translated]]></source>
+				<target><![CDATA[Vous pouvez mettre le nom en <b>anglais</b>, il sera traduit]]></target>
+			</trans-unit>
+			<trans-unit>
+				<source>You can put the english name, it'll be translated</source>
+				<target>Vous pouvez mettre le nom en anglais, il sera traduit</target>
+			</trans-unit>
+			<trans-unit>
+				<source>is empty</source>
+				<target>vide ?</target>
+			</trans-unit>
+
+			<trans-unit>
+				<source><![CDATA[New rank for <i>%s</i>]]></source>
+				<target><![CDATA[Nouveau rang pour <i>%s</i>]]></target>
+			</trans-unit>
+			<trans-unit>
+				<source>Rank</source>
+				<target>Rang</target>
+			</trans-unit>
+
+			<trans-unit>
+				<source>Stats</source>
+				<target>Statistiques</target>
+			</trans-unit>
+			<trans-unit>
+				<source><![CDATA[[0] No article|[1] <b>One</b> article|(1,Inf] <b>%1%</b> articles]]></source>
+				<target><![CDATA[[0] Aucun article|[1] <b>Un</b> article|(1,Inf] <b>%1%</b> articles]]></target>
+			</trans-unit>
+			<trans-unit>
+				<source><![CDATA[[0] No comment|[1] <b>One</b> comment|(1,Inf] <b>%1%</b> comments]]></source>
+				<target><![CDATA[[0] Aucun commentaire|[1] <b>Un</b> commentaire|(1,Inf] <b>%1%</b> commentaires]]></target>
+			</trans-unit>
+			<trans-unit>
+				<source><![CDATA[[1] You have the only one account|(1,Inf] <b>%1%</b> accounts]]></source>
+				<target><![CDATA[[1] Vous avez le seul compte|(1,Inf] <b>%1%</b> comptes]]></target>
+			</trans-unit>
+			<trans-unit>
+				<source><![CDATA[[1] You are the only one in the staff|(1,Inf] <b>%1%</b> people in the staff]]></source>
+				<target><![CDATA[[1] Vous êtes seul dans le staff|(1,Inf] <b>%1%</b> personnes dans le staff]]></target>
+			</trans-unit>
+			<trans-unit>
+				<source><![CDATA[[0] No rank|[1] <b>One</b> rank|(1,Inf] <b>%1%</b> ranks]]></source>
+				<target><![CDATA[[0] Aucun rang|[1] <b>Un</b> rang|(1,Inf] <b>%1%</b> rangs]]></target>
+			</trans-unit>
+			<trans-unit>
+				<source><![CDATA[[0] No poll|[1] <b>One</b> poll|(1,Inf] <b>%1%</b> polls]]></source>
+				<target><![CDATA[[0] Aucun sondage|[1] <b>Un</b> sondage|(1,Inf] <b>%1%</b> sondages]]></target>
+			</trans-unit>
+			<trans-unit>
+				<source><![CDATA[[0] No poll option|[1] <b>One</b> poll option|(1,Inf] <b>%1%</b> poll options]]></source>
+				<target><![CDATA[[0] Aucune option de sondage|[1] <b>Une</b> option de sondage|(1,Inf] <b>%1%</b> options de sondage]]></target>
+			</trans-unit>
+			<trans-unit>
+				<source><![CDATA[[0] No zaap|[1] <b>One</b> zaap|(1,Inf] <b>%1%</b> zaaps]]></source>
+				<target><![CDATA[[0] Aucun zaap|[1] <b>Un</b> zaap|(1,Inf] <b>%1%</b> zaaps]]></target>
+			</trans-unit>
+			<trans-unit>
+				<source><![CDATA[[0] No zaapi|[1] <b>One</b> zaapi|(1,Inf] <b>%1%</b> zaapis]]></source>
+				<target><![CDATA[[0] Aucun zaapi|[1] <b>Un</b> zaapi|(1,Inf] <b>%1%</b> zaapis]]></target>
+			</trans-unit>
+			<trans-unit>
+				<source><![CDATA[[0] Any item in the shop|[1] <b>One</b> item in the shop|(1,Inf] <b>%1%</b> items in the shop]]></source>
+				<target><![CDATA[[0] Aucun objet dans la boutique|[1] <b>Un</b> objet dans la boutique|(1,Inf] <b>%1%</b> objets dans la boutique]]></target>
+			</trans-unit>
+			<trans-unit>
+				<source><![CDATA[[0] Any game server|[1] <b>One</b> game server|(1,Inf] <b>%1%</b> game servers]]></source>
+				<target><![CDATA[[0] Aucun serveur de jeu|[1] <b>Un</b> serveur de jeu|(1,Inf] <b>%1%</b> serveurs de jeu]]></target>
+			</trans-unit>
+			<trans-unit>
+				<source><![CDATA[[0] No exp level|[1] <b>One</b> exp level|(1,Inf] <b>%1%</b> exp levels]]></source>
+				<target><![CDATA[[0] Aucun palier d'XP|[1] <b>Un</b> palier d'XP|(1,Inf] <b>%1%</b> paliers d'XP]]></target>
+			</trans-unit>
+			<trans-unit>
+				<source><![CDATA[[0] No rule|[1] <b>One</b> rule|(1,Inf] <b>%1%</b> rules]]></source>
+				<target><![CDATA[[0] Aucune règle|[1] <b>Une</b> règle|(1,Inf] <b>%1%</b> règles]]></target>
+			</trans-unit>
+			<trans-unit>
+				<source><![CDATA[[0] No FAQ|[1] <b>One</b> FAQ|(1,Inf] <b>%1%</b> FAQ]]></source>
+				<target><![CDATA[[0] Aucune question posée fréquemment|[1] <b>Une</b> question posée fréquemment|(1,Inf] <b>%1%</b> questions posées fréquemment]]></target>
+			</trans-unit>
+
+			<trans-unit>
+				<source>Site Index</source>
+				<target>Accueil du site</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Admin</source>
+				<target>Administration</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Polls</source>
+				<target>Sondages</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Staff</source>
+				<target>Équipe</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Rules List</source>
+				<target>Liste des règles</target>
+			</trans-unit>
+
+			<trans-unit>
+				<source>Auth Error</source>
+				<target>Erreur de privilège</target>
+			</trans-unit>
+			<trans-unit>
+				<source>You don't have the required level for this page.</source>
+				<target>Vous n'avez pas le niveau requis pour accéder à cette page.</target>
+			</trans-unit>
+
+			<trans-unit>
+				<source>Start Date</source>
+				<target>Date de départ</target>
+			</trans-unit>
+			<trans-unit>
+				<source>End Date</source>
+				<target>Date de fin</target>
+			</trans-unit>
+			<trans-unit>
+				<source>New Poll</source>
+				<target>Nouveau sondage</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Titles may look have no translation</source>
+				<target>Les titres peuvent sembler ne pas avoir de traduction</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Title/Options may look have no translation</source>
+				<target>Le titre/Les options peuvent sembler ne pas avoir de traduction</target>
+			</trans-unit>
+			<trans-unit>
+				<source>[0,1] Option|(1,Inf] Options</source>
+				<target>[0,1] Option|(1,Inf] Options</target>
+			</trans-unit>
+			<trans-unit>
+				<source>New Poll</source>
+				<target>Nouveau sondage</target>
+			</trans-unit>
+			<trans-unit>
+				<source><![CDATA[Edit Poll <i>%s</i>]]></source>
+				<target><![CDATA[Éditer le sondage <i>%s</i>]]></target>
+			</trans-unit>
+			<trans-unit>
+				<source><![CDATA[New option for the poll <i>%s</i>]]></source>
+				<target><![CDATA[Nouvelle option pour le sondage <i>%s</i>]]></target>
+			</trans-unit>
+			<trans-unit>
+				<source><![CDATA[Edit option <i>%s</i> for the poll <i>%s</i>]]></source>
+				<target><![CDATA[Éditer l'option <i>%s</i> pour le sondage <i>%s</i>]]></target>
+			</trans-unit>
+
+			<trans-unit>
+				<source>Faq List</source>
+				<target>Liste des question posées fréquemment</target>
+			</trans-unit>
+			<trans-unit>
+				<source>New Faq</source>
+				<target>Nouvelle question posée fréquemment</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Question</source>
+				<target>Question</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Answer</source>
+				<target>Réponse</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Edit FAQ "%%question%%"</source>
+				<target>Édition de la question posée fréquemment "%%question%%"</target>
+			</trans-unit>
+
+			<trans-unit>
+				<source>Account List</source>
+				<target>Liste des comptes</target>
+			</trans-unit>
+			<trans-unit>
+				<source>New Account</source>
+				<target>Nouveau compte</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Edit account of "%%username%%"</source>
+				<target>Édition du compte de "%%username%%"</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Username</source>
+				<target>Nom d'utilisateur</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Password</source>
+				<target>Mot de passe</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Is banned</source>
+				<target>Est banni</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Ban</source>
+				<target>Bannir</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Unban</source>
+				<target>Débannir</target>
+			</trans-unit>
+			<trans-unit>
+				<source>The selected accounts have been banned successfully.</source>
+				<target>Les comptes sélectionnés ont été bannis avec succès.</target>
+			</trans-unit>
+			<trans-unit>
+				<source>The selected accounts have been unbanned successfully.</source>
+				<target>Les comptes sélectionnés ont été débannis avec succès.</target>
+			</trans-unit>
+			<trans-unit>
+				<source>The selected account have been banned successfully.</source>
+				<target>Le compte sélectionné a été bannis avec succès.</target>
+			</trans-unit>
+			<trans-unit>
+				<source>The selected account have been unbanned successfully.</source>
+				<target>Le compte sélectionné a été débannis avec succès.</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Parameters</source>
+				<target>Paramètres</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Informations</source>
+				<target>Informations</target>
+			</trans-unit>
+
+			<trans-unit>
+				<source>New Rule</source>
+				<target>Nouvelle règle</target>
+			</trans-unit>
+
+			<trans-unit>
+				<source>Shop</source>
+				<target>Boutique</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Cost</source>
+				<target>Coût</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Item</source>
+				<target>Objet</target>
+			</trans-unit>
+			<trans-unit>
+				<source>New item in the shop</source>
+				<target>Nouvel objet dans la boutique</target>
+			</trans-unit>
+			<trans-unit>
+				<source><![CDATA[Edit item "<i>%s</i>" for the shop]]></source>
+				<target><![CDATA[Édition de l'objet "<i>%s</i>" pour la boutique]]></target>
+			</trans-unit>
+
+			<trans-unit>
+				<source>Server</source>
+				<target>Serveur</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Zaap List</source>
+				<target>Liste des zaaps</target>
+			</trans-unit>
+			<trans-unit>
+				<source>New Zaap</source>
+				<target>Nouveau Zaap</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Edit Zaap</source>
+				<target>Édition du Zaap</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Zaapi List</source>
+				<target>Liste des zaapis</target>
+			</trans-unit>
+			<trans-unit>
+				<source>New Zaapi</source>
+				<target>Nouveau Zaapi</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Edit Zaapi</source>
+				<target>Édition du Zaapi</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Map</source>
+				<target>Carte</target>
+			</trans-unit>
+
+			<trans-unit>
+				<source>Exp List</source>
+				<target>Liste des paliers d'xp</target>
+			</trans-unit>
+			<trans-unit>
+				<source>New Exp</source>
+				<target>Nouveau palier d'xp</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Edit Exp</source>
+				<target>Édition du palier d'xp</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Character</source>
+				<target>Personnage</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Job</source>
+				<target>Métier</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Mount</source>
+				<target>Monture</target>
+			</trans-unit>
+
+			<trans-unit>
+				<source>Server List</source>
+				<target>Liste des serveurs</target>
+			</trans-unit>
+			<trans-unit>
+				<source>New Server</source>
+				<target>Nouveau serveur de jeu</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Edit Server</source>
+				<target>Édition du serveur de jeu</target>
+			</trans-unit>
+			<trans-unit>
+				<source>System port</source>
+				<target>Port système</target>
+			</trans-unit>
+
+			<trans-unit>
+				<source>Mass Mail</source>
+				<target>E-Mail de masse</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Subject</source>
+				<target>Sujet</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Minimum level</source>
+				<target>Niveau minimum</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Minimum gmlevel to receive this mail</source>
+				<target>GmLevel minimum pour recevoir l'e-mail</target>
+			</trans-unit>
+		<!--Not translated: [Modules, Zone, Pvp]-->
+		<!--
+			<trans-unit>
+				<source></source>
+				<target></target>
+			</trans-unit>
+		-->
+			<trans-unit>
+				<source>"%value%" is too short (%min_length% characters min).</source>
+				<target>"%value%" est trop court (%min_length% caractères minimum).</target>
+			</trans-unit>
+			<trans-unit>
+				<source>"%value%" is too long (%max_length% characters max).</source>
+				<target>"%value%" est trop long (%max_length% caractères maximum).</target>
+			</trans-unit>
+			<trans-unit>
+				<source>"%value%" is not an integer.</source>
+				<target>"%value%" n'est pas un entier.</target>
+			</trans-unit>
+			<trans-unit>
+				<source>"%value%" must be at least %min%.</source>
+				<target>"%value%" doit être au minimum %min%.</target>
+			</trans-unit>
+			<trans-unit>
+				<source>"%value%" must be at most %max%.</source>
+				<target>"%value"% doit être au maximum %max%.</target>
+			</trans-unit>
+
+			<trans-unit>
+				<source>Are you sure?</source>
+				<target>Êtes-vous sûr ?</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Content</source>
+				<target>Contenu</target>
+			</trans-unit>
+			<trans-unit>
+				<source><![CDATA[Logged on as <b>%s</b>]]></source>
+				<target><![CDATA[Connecté en tant que <b>%s</b>]]></target>
+			</trans-unit>
+			<trans-unit>
+				<source>Add</source>
+				<target>Ajouter</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Edit</source>
+				<target>Éditer</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Delete</source>
+				<target>Supprimer</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Back to list</source>
+				<target>Revenir à la liste</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Save</source>
+				<target>Sauvegarder</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Send</source>
+				<target>Envoyer</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Invalid.</source>
+				<target>Invalide.</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Required.</source>
+				<target>Requis.</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Player</source>
+				<target>Joueur</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Moderator</source>
+				<target>Modérateur</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Master of Game</source>
+				<target>Maître du jeu</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Developer</source>
+				<target>Développeur</target>
+			</trans-unit>
+			<trans-unit>
+				<source>Administrator</source>
+				<target>Administrateur</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
