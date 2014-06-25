@@ -30,14 +30,14 @@ DocumentRoot "C:\wamp/www/web"
   </Directory>
 ```
 Attention : vous devez modifier la partie `C:\wamp/www/`, c'est le dossier dans lequel CE fichier (README) se trouve.
-Vérifiez bien que "web" et "lib" existent dans ce dossier, vous avez fait une erreur sinon.
+Vï¿½rifiez bien que "web" et "lib" existent dans ce dossier, vous avez fait une erreur sinon.
 
-N'oubliez pas de redémarrer Apache une fois l'édition terminée.
+N'oubliez pas de redï¿½marrer Apache une fois l'ï¿½dition terminï¿½e.
 
 
 
 ## Configuration
-Le fichier des base de données est `config/databases.yml`.
+Le fichier des base de donnï¿½es est `config/databases.yml`.
 
 Vous pouvez modifier la configuration de base dans apps/frontend/app.yml
 Vous pouvez modifier les traductions dans apps/[app]/i18n/fr/messages.xml
